@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brice Donald Abodo - Portfolio</title>
+    <style>
+        /* Styles for light and dark themes */
+        body.light {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        body.dark {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        /* Common styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .language-switcher, .theme-switcher {
+            margin: 10px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="language-switcher">
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('ru')">Русский</button>
+        <button onclick="switchLanguage('fr')">Français</button>
+    </div>
+    <div class="theme-switcher">
+        <button onclick="switchTheme()">Switch Theme</button>
+    </div>
+
+    <!-- English Content -->
+    <div id="content-en" class="content-section">
+        <h1>Brice Donald Abodo</h1>
+        <h2>Data Analyst | Artificial Intelligence Specialist</h2>
+        <div class="section">
+            <h3>Work Experience</h3>
+            <h4>February 2024 – August 2024</h4>
+            <p><strong>Intern Programmer at VAVT</strong></p>
+            <ul>
+                <li>Developed and tuned multiple machine learning models for text classification.</li>
+                <li>Applied convolutional neural networks to identify local patterns in text sequences.</li>
+                <li>Fine-tuned the DistilBERT transformer, achieving the best results.</li>
+                <li>Integrated data from multiple sources to create a comprehensive dataset.</li>
+            </ul>
+            <p><em>Key Achievements:</em> Successfully implemented a sentiment analysis model integrated into the workflow. Authored a research paper on Sentiment Analysis submitted for review.</p>
+        </div>
+        <!-- Additional sections like Education, Skills, etc. -->
+    </div>
+
+    <!-- Russian Content -->
+    <div id="content-ru" class="content-section hidden">
+        <h1>Брайс Дональд Абодо</h1>
+        <h2>Аналитик данных | Специалист по искусственному интеллекту</h2>
+        <div class="section">
+            <h3>Опыт работы</h3>
+            <h4>Февраль 2024 – Август 2024</h4>
+            <p><strong>Стажер-программист в ВАВТ</strong></p>
+            <ul>
+                <li>Разработка и настройка моделей машинного обучения для классификации текста.</li>
+                <li>Применение сверточных нейронных сетей для выявления паттернов в текстовых последовательностях.</li>
+                <li>Тонкая настройка трансформера DistilBERT с лучшими результатами.</li>
+                <li>Интеграция данных из различных источников для создания комплексного набора данных.</li>
+            </ul>
+            <p><em>Ключевые результаты:</em> Успешно реализована модель анализа настроений, интегрированная в рабочий процесс. Написана научная статья по анализу настроений и отправлена на рецензирование.</p>
+        </div>
+        <!-- Additional sections like Education, Skills, etc. -->
+    </div>
+
+    <!-- French Content -->
+    <div id="content-fr" class="content-section hidden">
+        <h1>Brice Donald Abodo</h1>
+        <h2>Analyste de Données | Spécialiste en Intelligence Artificielle</h2>
+        <div class="section">
+            <h3>Expérience Professionnelle</h3>
+            <h4>Février 2024 – Août 2024</h4>
+            <p><strong>Stagiaire Programmeur chez VAVT</strong></p>
+            <ul>
+                <li>Développement et ajustement de modèles d'apprentissage automatique pour la classification de texte.</li>
+                <li>Application de réseaux neuronaux convolutionnels pour identifier des motifs locaux dans les séquences de texte.</li>
+                <li>Affinage du transformeur DistilBERT avec les meilleurs résultats.</li>
+                <li>Intégration de données de multiples sources pour créer un ensemble de données complet.</li>
+            </ul>
+            <p><em>Principaux Résultats:</em> Modèle d'analyse des sentiments mis en œuvre avec succès et intégré dans le flux de travail. Rédaction d'un article scientifique sur l'analyse des sentiments soumis pour examen.</p>
+        </div>
+        <!-- Additional sections like Education, Skills, etc. -->
+    </div>
+
+    <script>
+        // Function to switch language
+        function switchLanguage(lang) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById('content-' + lang).classList.remove('hidden');
+        }
+
+        // Function to switch theme
+        function switchTheme() {
+            document.body.classList.toggle('light');
+            document.body.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
